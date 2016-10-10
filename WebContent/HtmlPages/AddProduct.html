@@ -1,0 +1,109 @@
+
+<html>
+<head>
+
+<title>Insert title here</title>
+<script type="text/javascript">
+function fun()
+{
+   var regString=/^[a-zA-Z0-9 ]*$/;
+  var regInt=/^[0-9]*$/;
+  var regFloat=/^((\d+(\d*)?)|((\d*\.)?\d+))$/;
+  var regSpaces=/\s\s/;
+  var code=document.myForm.code.value;
+  var first=code.indexOf(" ");
+  var last=code.lastIndexOf(" ");
+   var modelId=document.myForm.mid.value;
+  var first1=modelId.indexOf(" ");
+  var last1=modelId.lastIndexOf(" ");
+ 
+
+ if(document.forms["myForm"]["code"].value=="")
+  {
+   alert("please enter  product code");
+    return false;
+    }
+ if(document.forms["myForm"]["code"].value=='null')
+{
+alert("product code should not be null");
+ return false;
+}
+if(document.myForm.code.value.search(regString)==-1)
+{
+ alert("product code should not contain special characters");
+ return false;
+}
+if((last-first)>0)
+{
+ alert("There should not be more than one space in product code");
+return false;
+}
+
+ if(document.myForm.mid.value=="")
+  {
+   alert("please enter modelId");
+    return false;
+    }
+ if(document.myForm.mid.value=='null')
+{
+alert("modelId should not be null");
+ return false;
+}
+if(document.myForm.mid.value.search(regString)==-1)
+{
+ alert("modelId should not contain special characters");
+ return false;
+}
+if((last1-first1)>0)
+{
+ alert("There should not be more than one space in modelId");
+return false;
+}
+if(document.forms["myForm"]["pname"].value=="")
+  {
+   alert("please enter  product Name");
+    return false;
+    }
+ if(document.forms["myForm"]["pname"].value=='null')
+{
+alert("product name should not be null");
+ return false;
+}
+if(document.myForm.pname.value.search(regString)==-1)
+{
+ alert("product Name should not contain special characters");
+ return false;
+}
+if(!(document.myForm.pname.value.search(regSpaces)==-1))
+{
+ alert("There should not be more than one  consecutive space in product name");
+return false;
+}
+if(document.forms["myForm"]["pstatus"].value=="")
+  {
+   alert("please enter  productstatus");
+    return false;
+    }
+if(!(document.forms["myForm"]["pstatus"].value=='Available'||document.forms["myForm"]["pstatus"].value=='Defected'||document.forms["myForm"]["pstatus"].value=='Dispatched'||document.forms["myForm"]["pstatus"].value=='Allocated'))
+  {
+   alert("please enter  productstatus Available/Defected/Dispatched/Allocated");
+    return false;
+    }
+return true;
+}
+</script>
+</head>
+
+<body>
+<form action="../InventoryController" method ="post" name="myForm" onsubmit="return(fun());">
+<table border="2" bgcolor="BurlyWood">
+<tr><td>ProductCode</td><td><input type="text" name="code" ></input></td></tr>
+<tr><td>ProductModelId</td><td><input type="text" name="mid" ></input></td></tr>
+<tr><td>ProductName</td><td><input type="text" name="pname" ></input></td></tr>
+<tr><td><input type="submit" value="Add Product" ></input></td></tr>
+</table> 
+<input type="hidden" name="action" value="addProduct"></input>
+</form>
+<a href="../JspPages/IMHomePage.jsp">Home</a>
+</body>
+</html>

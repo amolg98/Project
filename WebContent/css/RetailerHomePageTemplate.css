@@ -1,0 +1,226 @@
+div#backframe
+{
+	position:relative;
+    width:980px;   
+    margin:0 auto;
+    background-color: #ccffff;
+     
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-position: right top;
+    height:auto !important;
+    height:96%;
+}
+div#header
+{
+	background-color:CornflowerBlue ;
+	position:relative;
+}
+td.blacktitle
+{
+	color:Black;
+	font-family:Arial;
+	font-size:30px;	
+}
+td#whitetitle1
+{
+	color:White;
+	font-family:Arial;
+	font-size:30px;
+}
+td.whitetitle
+{
+	color:White;
+	font-family:Arial;
+	font-size:30px;	
+}
+div#navigationbar
+{
+	background-color:Gainsboro;
+	position:relative;
+	border-width: .2em;
+	border-style: groove;
+	border-color: #900;
+}
+a.whitelink
+{
+	color:Black;
+	font-family:Arial;
+	font-size:20px;
+	text-decoration:none;
+}
+a.blacklink
+{
+	color:MediumBlue;
+	font-family:Arial;
+	font-size:20px;
+	text-decoration:none;
+}
+table#pagetitle
+{
+	width:100%;
+}
+p#pagename
+{
+	color:CornflowerBlue;
+	font-family:Arial;
+	font-size:25px;	
+}
+p#pagelink
+{
+	color:Orange;
+	align:right;	
+}
+td#linkholder
+{
+	position:absolute;
+	right:3%;	
+}
+div#usermenu
+{
+	align:left;
+	position:absolute;
+	top:28%;
+	left:0%;		
+}
+table#cancelordersubmenu
+{
+	background-color:#b0c4de;
+	font-family:Arial;
+	font-size:12px;	
+}
+div#cancelordersubmenuholder
+{
+	visibility:hidden;
+	align:left;
+	position:absolute;
+	top:34%;
+	left:17%;
+}
+div#viewordersubmenuholder
+{
+	visibility:hidden;
+	align:left;
+	position:absolute;
+	top:36%;
+	left:17%;
+		
+}
+div#rewardsubmenuholder
+{
+	visibility:hidden;
+	align:left;
+	position:absolute;
+	top:36%;
+	left:17%;
+		
+}
+table#viewordersubmenu
+{
+	background-color:#b0c4de;
+	font-family:Arial;
+	font-size:12px;	
+}
+table#rewardsubmenu
+{
+	background-color:#b0c4de;
+	font-family:Arial;
+	font-size:12px;	
+}
+
+td.selector
+{
+	background-color:#b0c4de;
+}
+div#pagecontent
+{
+	align:center;
+	position:absolute;
+	top:28%;
+	left:17%	
+}
+div#helpcontent
+{
+	align:right;
+	position:absolute;
+	top:28%;
+	right:0%;
+	
+}
+div#footer
+{
+	bottom:0;
+	width:100%;
+	background-color:Orange;
+	clear:both;
+	text-align:center;
+	position:fixed;
+	border-width:2;
+	border-style: groove;
+	border-color:Black;"	
+}
+b#footmessage
+{
+	margin-bottom:0;
+	color='Black';
+	font-family:Arial;
+	font-size:15px;"	
+}
+iframe#id
+{
+	width:70%
+}
+
+div#handset
+{
+	visibility:hidden;
+}
+
+div.products
+{
+	visibility:hidden;
+	position:absolute;
+	top:15%;
+	left:15%;
+}
+
+table#retailermenu
+{
+	background-color:#b0c4de;
+	font-family:Arial;
+	font-size:12px;	
+}
+table#IMmenu
+{
+	background-color:#b0c4de;
+	font-family:Arial;
+	font-size:12px;	
+}
+input.hidetextbox
+{
+	visibility:hidden;	
+}
+table#tableholder
+{
+	width:100%;
+}
+td.roller
+{
+	align:center;
+	background:cyan;
+	font-family:arial;
+}
+td.tagitems
+{
+	align:left;
+	font-family:arial;	
+}
+td.tagproducts
+{
+	font-size:13px;
+}
+body
+{
+	background-color: AliceBlue;
+	background-image: url("");
+}

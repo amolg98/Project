@@ -1,0 +1,82 @@
+
+select * from prodStockTable p, prodModelInfo m where p.prodmodelid=m.prodmodelid and p.prodmodelid='7667';
+
+SELECT * FROM PRODSTOCKTABLE;
+
+SELECT * FROM PRODMODELINFO;
+
+SELECT * FROM RETAILER_GP2;
+
+SELECT * FROM RET_PRODUCTMODEL_TBL;
+
+SELECT * FROM RETAILER_GP2;
+
+select * from prodStockTable p, prodModelInfo m where p.prodmodelid=m.prodmodelid and prodcode='123456';
+
+INSERT INTO RETAILER_GP2 VALUES('5505', 'neha', 'mumbai', 50, 'nehasaini@gmail.com');
+INSERT INTO RETAILER_GP2 VALUES('2202', 'supreet', 'delhi', 20, 'supreet@yahoomail.com');
+INSERT INTO RETAILER_GP2 VALUES('4404', 'sumeet', 'bangalore', 40, 'sumeet@rediffmail.com');
+INSERT INTO RETAILER_GP2 VALUES('3303', 'abhinav', 'bangalore', 30, 'abhinav@gmail.com');
+INSERT INTO RETAILER_GP2 VALUES('1101', 'radhika', 'delhi', 10, 'radhika@gmail.com');
+        
+select * from prodStockTable p, prodModelInfo m where p.prodmodelid=m.prodmodelid;
+
+update PRODSTOCKTABLE set prodmodelstatus='Allocated' where prodcode='g';
+
+select * from user_constraints;
+
+select * from ORDER_GP2;
+
+INSERT INTO ORDER_GP2 VALUES(100, '5505', '14-JUN-2012', 14000.00, '21-JUN-2012','Pending');
+INSERT INTO ORDER_GP2 VALUES(101, '4404', '13-JUN-2012', 47400.00, '20-JUN-2012','Pending');
+INSERT INTO ORDER_GP2 VALUES(102, '5505', '14-JUN-2012', 20000.00, '21-JUN-2012','Pending');
+INSERT INTO ORDER_GP2 VALUES(103, '5505', '14-JUN-2012', 5000.00, '21-JUN-2012','Pending');
+ 32167449  SAMSUNG HM3100     SAMSUNG EARPHONE HM3100    Available          NULL
+
+SELECT * FROM PRODSTOCKTABLE;
+
+select * from prodmodelinfo;
+
+SELECT * FROM DEFPRODORDER;
+
+SELECT * FROM PRODSTOCKTABLE where orderid=100;
+
+UPDATE ORDER_GP2 SET STATUS='Pending' WHERE ORDER_ID='101';
+
+UPDATE PRODSTOCKTABLE SET PRODMODELSTATUS='Allocated', orderid=101 where prodcode='32167450';
+
+INSERT INTO ORDER_GP2 VALUES('2202', 'supreet', 'delhi', 20, 'supreet@yahoomail.com');
+INSERT INTO ORDER_GP2 VALUES('4404', 'sumeet', 'bangalore', 40, 'sumeet@rediffmail.com');
+INSERT INTO ORDER_GP2 VALUES('3303', 'abhinav', 'bangalore', 30, 'abhinav@gmail.com');
+INSERT INTO ORDER_GP2 VALUES('1101', 'radhika', 'delhi', 10, 'radhika@gmail.com');
+
+INSERT INTO DEFPRODORDER VALUES(100,'32167449','Not working properly',null);
+
+INSERT INTO DEFPRODORDER VALUES(100,'88867469','Battery leaked',null);
+
+DROP TABLE DEFPRODORDER;
+
+CREATE TABLE DEFPRODORDER(ORDERID NUMBER, DEFECTPRODCODE VARCHAR2(30), DEFECT_REASON VARCHAR2(30), REPLACEMENTPRODCODE VARCHAR2(30));
+
+select * from prodStockTable where prodModelStatus='Available' and prodmodelid='SAMSUNG HM3100';
+
+SELECT * FROM PRODSTOCKTABLE WHERE PRODMODELSTATUS='Dispatched';
+
+SELECT * FROM PRODSTOCKTABLE WHERE PRODMODELSTATUS='Allocated';
+
+UPDATE PRODSTOCKTABLE SET PRODMODELSTATUS='Allocated' where prodmodelstatus='Dispatched';
+
+update prodstocktable set prodmodelstatus='Allocated', orderid='100' where prodcode='32167449';
+
+update prodstocktable set prodmodelstatus='Available', orderid=null where prodcode='32167470';
+
+SELECT * FROM PRODSTOCKTABLE WHERE prodcode='32167449';
+
+insert into DEFPRODORDER values(100,'88867469',null);
+
+select * from prodstocktable where prodmodelstatus='Defected';
+
+
+update DEFPRODORDER set replacementprodcode=null where defectprodcode='32167449';
+
+

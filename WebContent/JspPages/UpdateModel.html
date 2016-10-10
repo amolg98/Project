@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script language="JavaScript"> 
+
+function noway(go) {
+ if (document.all) { 
+ if (event.button == 2) { 
+ alert("Sorry, right-click is disabled");
+  return false;
+   }
+    } 
+  if (document.layers) 
+  {
+   if (go.which == 3) {
+    alert("Sorry, right-click is disabled");
+     return false; 
+     }
+    }
+   }
+   if (document.layers) 
+	{
+	 document.captureEvents(Event.MOUSEDOWN); 
+	 }
+	document.onmousedown=noway; 
+</script>
+<script type="text/javascript">
+function validate()
+{
+
+  var regString=/^[a-zA-Z0-9 ]*$/;
+   var modelId=document.myForm.prodModelId.value;
+  var first=modelId.indexOf(" ");
+  var last=modelId.lastIndexOf(" ");
+ if(document.myForm.prodModelId.value=="")
+  {
+   alert("please enter modelId");
+    return false;
+    }
+ if(document.myForm.prodModelId.value=='null')
+{
+alert("modelId should not be null");
+ return false;
+}
+if(document.myForm.prodModelId.value.search(regString)==-1)
+{
+ alert("modelId should not contain special characters");
+ return false;
+}
+if((last-first)>0)
+{
+ alert("There should not be more than one space in modelId");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<form action="../InventoryController" method="post" onsubmit="return(validate());" name="myForm">
+<table border="1" bgcolor="lime">
+<tr><td>Model ID</td><td><input type="text" name="prodModelId"></td></tr>
+</table>
+<BR/>
+<input type="submit" value="Update Model Info"></input>
+<input type="hidden" name="action" value="updateModel">
+</form>
+<hr/>
+<br/>
+<a href="Home.html">Home</a>
+</body>
+</html>
