@@ -1,3 +1,4 @@
+select * from op_login_tbl
 
 select * from prodStockTable p, prodModelInfo m where p.prodmodelid=m.prodmodelid and p.prodmodelid='7667';
 
